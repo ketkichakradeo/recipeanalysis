@@ -152,9 +152,9 @@ We determined that a good way to test the truthfulness of the trend is to take t
 
 **Null Hypothesis**: All recipes are rated the same.
 
-**Alternative Hypothesis**: Long recipes are rated lower on average compared to short recipes.
+**Alternative Hypotheses**: Long recipes are rated lower on average compared to short recipes. Recipes with more steps are rated lower on average compared to recipes with less steps. Recipes with more ingredients are rated lower on average compared to recipes with less ingredients.
 
-**Test Statistics**: We are going to use <u>Mean Difference (TVD)</u> as our test statistics.
+**Test Statistics**: We are going to use <u>Mean Difference</u> as our test statistic.
 
 **Significance Level**: To ensure the accuracy of our conclusion on the existence of changes in preference, we determined to use a significance level of 5% to increase accuracy of our randomized test result.
 
