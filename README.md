@@ -82,16 +82,22 @@ To complete the univariate analysis, we removed the outliers from the dataset.
 #### Distribution of Average Ratings
 The following plot displays how many recipes recieved a certain rating. Based on the plot, we can see that majortiy of the recipes received a 5 star rating, as there is a singluar peak at the 5.0 rating mark. Additionally, the data is skewed left, indicating that majority of the recipes have a higher rating.
 
-<iframe src="assets/avg_rating_box.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/avg_rating_hist.html" width=800 height=600 frameBorder=0></iframe>
 
 #### Distribution of Cooking Steps
 The plot displays how many recipes have a certain number of steps. Based on the plot, we can see that there is a peak around 10 steps, and the graph is skewed right as most recipes tend to have 20 steps or less.
 
+<iframe src="assets/steps_hist.html" width=800 height=600 frameBorder=0></iframe>
+
 #### Distribution of Cooking Time
 From the boxplot, we can see that the minutes column has a median of around 33 with the IQR laying in between about 0 and 110. The data is skewed right, indicating that most recipes have lower cooking times.
 
+<iframe src="assets/minutes_hist.html" width=800 height=600 frameBorder=0></iframe>
+
 #### Distribution of Number of Ingredients
 The histogram shows a slightly symmetric distribution. There is a peak around 7 or 8 ingredients, and a roughly equal amount of recipes with less than 7 ingredients and more than 7 ingredients.
+
+<iframe src="assets/ingredients_hist.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 
@@ -100,8 +106,12 @@ The histogram shows a slightly symmetric distribution. There is a peak around 7 
 #### Number of Ingredients vs. Recipe Rating
 When plotting the number of ingredients vs average rating, there is a slight positive trend, with higher density of points towards higher average ratings.
 
+<iframe src="assets/ingredients_vs_rating.html" width=800 height=600 frameBorder=0></iframe>
+
 #### Number of Steps vs. Rating
 There is a slightly positive trend. As the rating increases, the number of ingredients also is positively correlated.
+
+<iframe src="assets/steps_vs_rating.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 
@@ -112,9 +122,25 @@ We were particularly interested in conducting a multidimensional analysis of thi
 
 From the pivot table, we can see that generally, recipes with more ingredients and more steps were more common.
 
+|   1 |   2 |   3 |   4 |   5 |   6 |   7 |   8 |   9 |   10 |
+|----:|----:|----:|----:|----:|----:|----:|----:|----:|-----:|
+| nan |   2 |   1 |   3 |   1 | nan |   1 | nan |   1 |    1 |
+|  61 |  87 | 113 | 101 |  79 |  70 |  42 |  43 |  35 |   26 |
+| 155 | 284 | 367 | 308 | 296 | 229 | 169 | 154 |  95 |   76 |
+| 209 | 466 | 591 | 556 | 523 | 473 | 409 | 289 | 218 |  180 |
+| 177 | 448 | 625 | 703 | 756 | 747 | 711 | 547 | 439 |  335 |
+
 #### Average Rating by Number of Ingredients and Number of Steps
 
 We can see that recipes with less ingredients were more likely to have a higher rating. Majority of these recieps received a 5 star rating.
+
+|         1 |       2 |       3 |       4 |       5 |         6 |       7 |         8 |       9 |      10 |
+|----------:|--------:|--------:|--------:|--------:|----------:|--------:|----------:|--------:|--------:|
+| nan       | 5       | 5       | 4.83333 | 4.25    | nan       | 4.95    | nan       | 5       | 5       |
+|   4.64071 | 4.72059 | 4.71517 | 4.72326 | 4.58198 |   4.75968 | 4.73417 |   4.75043 | 4.58663 | 4.56398 |
+|   4.7733  | 4.68695 | 4.66226 | 4.6613  | 4.64923 |   4.68736 | 4.62882 |   4.64639 | 4.67586 | 4.61296 |
+|   4.69127 | 4.68823 | 4.64924 | 4.63692 | 4.64822 |   4.59635 | 4.6274  |   4.62915 | 4.57043 | 4.62855 |
+|   4.67418 | 4.65714 | 4.6654  | 4.67729 | 4.64328 |   4.59967 | 4.64362 |   4.6591  | 4.63867 | 4.66933 |
 
 ---
 
@@ -137,7 +163,7 @@ We created a new column indicating the missingness status of the `avg_rating`, a
 
 Below are distributions of minutes with and without rating. From the histogram below, we notice there distribution is very similar. But we will continue to conduct a permutation test with mean as test statistic.
 
-<iframe src="figures/minute_miss_hist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets.minutes_by_missingness_rating_hist_box.html" width=800 height=600 frameBorder=0></iframe>
 
 Below shows the empirical distribution of our test statistics in 1000 permutations, the red line indicates the observed test statistics.
 
@@ -167,4 +193,14 @@ The plot below shows the empirical distribution of our test statistics in 1000 p
 The observed difference in average ratings between long and short recipes is 0.0296. However, the calculated p-value of 1.0 indicates that, under the null hypothesis of no difference in ratings between long and short recipes, the observed difference is not statistically significant. Therefore, we fail to reject the null hypothesis, suggesting that there is insufficient evidence to conclude that long recipes are rated lower on average compared to short recipes based on the given data. The results do not support the alternative hypothesis of a significant difference in ratings between long and short recipes. Hence, we **fail to reject our null hypothesis**.
 
 ## Conclusion:
-All in all,, 
+We asked ourselves whether recipe length (in minutes), step count, and ingredient count affected the average rating of a recipe. Exploring the relationship between average ratings alongside other factors enabled us to understand what can affect an individual’s overall satisfaction of a meal. Here is a summary of the trends we found:
+
+Recipe Length and Average Rating:
+Our data analysis does not provide adequate evidence to support the notion that the length of a recipe significantly influences its average rating.
+
+Step Count and Average Rating:
+The results of our analysis indicate a meaningful relationship between the number of steps in a recipe and its average rating, suggesting that step count does impact the perceived quality of a recipe.
+
+Number of Ingredients and Average Rating:
+Conversely, our findings do not offer sufficient support for the idea that the number of ingredients is a significant predictor of a recipe's average rating.
+
