@@ -119,7 +119,7 @@ We can see that recipes with less ingredients were more likely to have a higher 
 ## Assessment of Missingness
 
 ### NMAR Analysis
-Only the "avg_rating" column has missing values. We concluded that there ajfaefjkagjeagfa.
+We think that the avg_rating column is NMAR because it is possible that those who weren't as satisfied with the recipes choose not to rate it aand add their opinion to the website.
 
 ---
 
