@@ -168,7 +168,7 @@ We created a new column indicating the missingness status of the `avg_rating`, a
 
 Below are distributions of minutes with and without rating. From the histogram below, we notice there distribution is very similar. But we will continue to conduct a permutation test with mean as test statistic.
 
-<iframe src="assets.minutes_by_missingness_rating_hist_box.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/minutes_by_missingness_rating_hist_box.html" width=800 height=600 frameBorder=0></iframe>
 
 Below shows the empirical distribution of our test statistics in 1000 permutations, the red line indicates the observed test statistics.
 
