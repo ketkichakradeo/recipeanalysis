@@ -113,11 +113,50 @@ We can see that recipes with less ingredients were more likely to have a higher 
 ## Assessment of Missingness
 
 ### NMAR Analysis
+Only the "avg_rating" column has missing values. We concluded that there ajfaefjkagjeagfa.
 
 ---
 
 ### Missingness Dependency
 
----
+We decided to examine the `avg_rating` column. We constructed permutation tests to determine the relationship. We have decided to test the dependency between the missingness of `avg_rating` with two columns: `minutes` and `minutes`.
 
+Null Hypothesis: The missingness of 'avg_rating' is independent of other columns.
+
+Alternative Hypothesis: The missingness of 'avg_rating' is dependent on minutes column.
+
+We created a new column indicating the missingness status of the `avg_rating`, and shuffled this column for our permutation. Since `minutes` is numeric, we used the absolute mean difference of `minutes` when `avg_rating` is and is not missing as our test statistics.
+
+Below are distributions of minutes with and without rating. From the histogram below, we notice there distribution is very similar. But we will continue to conduct a permutation test with mean as test statistic.
+
+<iframe src="figures/minute_miss_hist.html" width=800 height=600 frameBorder=0></iframe>
+
+Below shows the empirical distribution of our test statistics in 1000 permutations, the red line indicates the observed test statistics.
+
+<iframe src="figures/empi_dist_minute_rate.html" width=800 height=600 frameBorder=0></iframe>
+
+From the graph above and out permutation test, we get a p-value that's lower than our significance level of 5%, so we reject the null hypothesis.
+
+**Therefore, we conclude that it is highly possible that the missingness of `avg_rating` *<u>does</u>* depend on `minutes` column.**
+
+---
 ## Hypothesis Testing
+### Permutation Test
+We determined that a good way to test the truthfulness of the trend is to take the distribution at the start and end of the decade for comparison. Hence, we are going to conduct a permutation test on the difference between the ratings for recipes that are "short" and "long." We define "long" recipes to be greater than the found median, 33 minutes, and anything below 33 minutes will be considered "short."
+
+**Null Hypothesis**: All recipes are rated the same.
+
+**Alternative Hypothesis**: Long recipes are rated lower on average compared to short recipes.
+
+**Test Statistics**: We are going to use <u>Mean Difference (TVD)</u> as our test statistics.
+
+**Significance Level**: To ensure the accuracy of our conclusion on the existence of changes in preference, we determined to use a significance level of 5% to increase accuracy of our randomized test result.
+
+The plot below shows the empirical distribution of our test statistics in 1000 permutations, the red line indicates the observed test statistics.
+
+<iframe src="figures/permutation_test_dist.html" width=800 height=600 frameBorder=0></iframe>
+
+The observed difference in average ratings between long and short recipes is 0.0296. However, the calculated p-value of 1.0 indicates that, under the null hypothesis of no difference in ratings between long and short recipes, the observed difference is not statistically significant. Therefore, we fail to reject the null hypothesis, suggesting that there is insufficient evidence to conclude that long recipes are rated lower on average compared to short recipes based on the given data. The results do not support the alternative hypothesis of a significant difference in ratings between long and short recipes. Hence, we **fail to reject our null hypothesis**.
+
+## Conclusion:
+All in all,, 
