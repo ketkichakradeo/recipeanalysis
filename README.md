@@ -66,9 +66,9 @@ For the minutes column, there were many values in the tens of thousands and it r
 
 The relevant columns for our research question are avg_rating, minutes,  n_steps, and n_ingredients, so we did not need to process the other columns. Below is the head of our final cleaned dataframe. 
 
-
-
-<iframe src="assets/10-80-enrollment.html" width=800 height=600 frameBorder=0></iframe>
+```py
+print(df_filtered.head().to_markdown(index=False))
+```
 
 ---
 
