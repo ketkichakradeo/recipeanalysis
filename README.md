@@ -35,8 +35,10 @@ In our RAW_recipes.csv dataset, there are 83782 rows from 2008 to 2018, and 10 c
 |`'n_steps'`	         |Number of steps in recipe|
 |`'steps'`	             |Text for recipe steps, in order|
 |`'description'`	     | User-provided description|
+|`'ingredients'	`            |Recipe ingredients|
+|`'n_ingredients'	`            |number of ingredients|
 
-The columns that are relevant to our study are: 
+The columns that are relevant to our study are: `'name', `'minutes', `'n_steps'` and `'n_ingredients'.
 
 In the RAW_interactions.csv dataset, there are 731,927 rows and 5 columns.
 
@@ -48,7 +50,7 @@ In the RAW_interactions.csv dataset, there are 731,927 rows and 5 columns.
 |`'rating'`	|Rating given|
 |`'review'`	|Review text|
 
-The columns that are relevant to our study are:
+The columns that are relevant to our study are `'rating'.
 
 ---
 
