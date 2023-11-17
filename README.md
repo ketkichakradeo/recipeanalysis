@@ -155,6 +155,11 @@ We think that the avg_rating column is NMAR because it is possible that those wh
 
 We decided to examine the `avg_rating` column. We constructed permutation tests to determine the relationship. We have decided to test the dependency between the missingness of `avg_rating` with two columns: `minutes` and `minutes`.
 
+We compare two distributions:
+
+1. The distribution of 'minutes' when 'avg_rating' is missing.  
+2. The distribution of 'minutes' when 'avg_rating' is not missing.
+   
 Null Hypothesis: The missingness of 'avg_rating' is independent of other columns.
 
 Alternative Hypothesis: The missingness of 'avg_rating' is dependent on minutes column.
