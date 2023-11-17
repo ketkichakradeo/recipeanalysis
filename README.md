@@ -82,7 +82,7 @@ To complete the univariate analysis, we removed the outliers from the dataset.
 #### Distribution of Average Ratings
 The following plot displays how many recipes recieved a certain rating. Based on the plot, we can see that majortiy of the recipes received a 5 star rating, as there is a singluar peak at the 5.0 rating mark. Additionally, the data is skewed left, indicating that majority of the recipes have a higher rating.
 
-<iframe src="figures/avg_rating_box.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="avg_rating_box.html" width=800 height=600 frameBorder=0></iframe>
 
 #### Distribution of Cooking Steps
 The plot displays how many recipes have a certain number of steps. Based on the plot, we can see that there is a peak around 10 steps, and the graph is skewed right as most recipes tend to have 20 steps or less.
