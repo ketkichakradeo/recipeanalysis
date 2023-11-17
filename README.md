@@ -1,4 +1,4 @@
-# Recipe Analysis
+# Recipe Rating Trends
 
 **Authors**: Ketki Chakradeo (kchakradeo@ucsd.edu) and Kayanne Tran (kqtran@ucsd.edu)
 
