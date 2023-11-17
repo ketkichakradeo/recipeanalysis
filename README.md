@@ -66,9 +66,13 @@ For the minutes column, there were many values in the tens of thousands and it r
 
 The relevant columns for our research question are avg_rating, minutes,  n_steps, and n_ingredients, so we did not need to process the other columns. Below is the head of our final cleaned dataframe. 
 
-```py
-print(df_filtered.head().to_markdown(index=False))
-```
+| name                                 |     id |   minutes |   avg_rating |   n_steps |   n_ingredients |
+|:-------------------------------------|-------:|----------:|-------------:|----------:|----------------:|
+| 1 brownies in the world    best ever | 333281 |        40 |            4 |        10 |               9 |
+| 1 in canada chocolate chip cookies   | 453467 |        45 |            5 |        12 |              11 |
+| 412 broccoli casserole               | 306168 |        40 |            5 |         6 |               9 |
+| millionaire pound cake               | 286009 |       120 |            5 |         7 |               7 |
+| 2000 meatloaf                        | 475785 |        90 |            5 |        17 |              13 |
 
 ---
 
