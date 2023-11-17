@@ -191,9 +191,14 @@ We determined that a good way to test the truthfulness of the trend is to take t
 
 **Significance Level**: To ensure the accuracy of our conclusion on the existence of changes in preference, we determined to use a significance level of 5% to increase accuracy of our randomized test result.
 
-The plot below shows the empirical distribution of our test statistics in 1000 permutations, the red line indicates the observed test statistics.
+The plot below shows the empirical distribution of each of our test statistics in 500 permutations, the red line indicates the observed test statistics.
 
-<iframe src="assets/permutation_test_dist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/minutes_permutation_hist.html" width=800 height=600 frameBorder=0></iframe>
+
+<iframe src="assets/n_steps_permutation_hist.html" width=800 height=600 frameBorder=0></iframe>
+
+<iframe src="assets/n_ingredients_permutation_hist.html" width=800 height=600 frameBorder=0></iframe>
+
 
 The observed difference in average ratings between long and short recipes is 0.0296. However, the calculated p-value of 1.0 indicates that, under the null hypothesis of no difference in ratings between long and short recipes, the observed difference is not statistically significant. Therefore, we fail to reject the null hypothesis, suggesting that there is insufficient evidence to conclude that long recipes are rated lower on average compared to short recipes based on the given data. The results do not support the alternative hypothesis of a significant difference in ratings between long and short recipes. Hence, we **fail to reject our null hypothesis**.
 
