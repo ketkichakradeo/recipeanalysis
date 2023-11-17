@@ -172,7 +172,7 @@ Below are distributions of minutes with and without rating. From the histogram b
 
 Below shows the empirical distribution of our test statistics in 1000 permutations, the red line indicates the observed test statistics.
 
-<iframe src="assets/missingness_tvd_distrubtion.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/missingness_tvd_distribution.html" width=800 height=600 frameBorder=0></iframe>
 
 From the graph above and out permutation test, we get a p-value that's lower than our significance level of 5%, so we reject the null hypothesis.
 
