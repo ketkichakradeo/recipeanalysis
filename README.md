@@ -38,7 +38,7 @@ In our RAW_recipes.csv dataset, there are 83782 rows from 2008 to 2018, and 10 c
 |`'ingredients'	`            |Recipe ingredients|
 |`'n_ingredients'	`            |number of ingredients|
 
-The columns that are relevant to our study are: `'name', `'minutes', `'n_steps'` and `'n_ingredients'.
+The columns that are relevant to our study are: `'name' ``'minutes'` `'n_steps'` and `'n_ingredients'`
 
 In the RAW_interactions.csv dataset, there are 731,927 rows and 5 columns.
 
@@ -50,7 +50,7 @@ In the RAW_interactions.csv dataset, there are 731,927 rows and 5 columns.
 |`'rating'`	|Rating given|
 |`'review'`	|Review text|
 
-The columns that are relevant to our study are `'rating'.
+The columns that are relevant to our study are `'rating'`.
 
 ---
 
@@ -153,7 +153,7 @@ We think that the avg_rating column is NMAR because it is possible that those wh
 
 ### Missingness Dependency
 
-We decided to examine the `avg_rating` column. We constructed permutation tests to determine the relationship. We have decided to test the dependency between the missingness of `avg_rating` with two columns: `minutes` and `minutes`.
+We decided to examine the `avg_rating` column. We constructed permutation tests to determine the relationship. We have decided to test the dependency between the missingness of `avg_rating` with `minutes`.
 
 We compare two distributions:
 
